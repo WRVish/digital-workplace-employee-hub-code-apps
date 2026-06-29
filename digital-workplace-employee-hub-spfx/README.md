@@ -44,6 +44,16 @@ To run and build this project locally, you must ensure your environment meets Mi
 - **Yeoman**: Installed globally (`npm install -g yo`)
 - **SharePoint Tenant:** Access to an M365 Developer Tenant or a standard SharePoint Online environment for testing.
 
+## Deployment & List Setup
+
+### Automated SharePoint List Creation
+This Web Part relies on several backend SharePoint lists to function correctly (e.g., EmployeeMaster, LeaveRequests, IncidentRequests, etc.). 
+Instead of creating these manually, you can automatically scaffold all required lists and columns by running the provided PowerShell script located in the root directory of the repository:
+```bash
+./Deploy-IntranetApp.ps1
+```
+*Note: Ensure you run this script against your target site collection before deploying the SPFx package, as the web part dynamically maps to these lists.*
+
 ## Getting Started
 
 1. **Install Dependencies:**

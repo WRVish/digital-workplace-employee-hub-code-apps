@@ -41,6 +41,35 @@ To run this project locally, you will need:
 - **Node.js**: v16.x or higher
 - **npm**: v7.x or higher (or Yarn/pnpm)
 
+## Deployment & Tenant Configuration
+
+### 1. SharePoint List Setup
+This application relies on several SharePoint lists for data storage (e.g., EmployeeMaster, LeaveRequests, IncidentRequests, ExpenseClaims, etc.). 
+To automatically scaffold and create these lists with the correct schema in your SharePoint site, run the provided PowerShell script located in the root directory of the repository:
+```bash
+./Deploy-IntranetApp.ps1
+```
+
+### 2. Tenant Configuration
+To use this code app in your own Microsoft tenant, you must update the `power.config.json` file before running or building. Specifically, locate and modify these fields:
+
+1. **Environment ID**:
+   - Locate the `"environmentId"` field near the top of the file.
+   - Replace it with your target Power Platform environment GUID (which can be found in your Power Platform Admin Center).
+
+2. **Connection Reference ID**:
+   - Before running the app, ensure you have a valid SharePoint connection in your environment.
+   - Run the following Power Apps CLI command in your terminal to list your active connections:
+     ```bash
+     pac connection list
+     ```
+   - Locate your SharePoint connection in the output and copy its **Connection ID**.
+   - Under `"connectionReferences"`, replace the existing GUID key (currently `"dfe9c37d-3150-4ecf-a582-b1754346ef53"`) with your copied Connection ID.
+
+3. **SharePoint Site URL**:
+   - Under `"connectionReferences"` -> `[Your Connection ID]` -> `"dataSets"`, you will see a JSON key with the placeholder SharePoint URL: `"https://devtenant0424.sharepoint.com/sites/DigitalWorkplace"`.
+   - You must rename this entire JSON key to match the exact URL of the SharePoint site where you ran the deployment script.
+
 ## Getting Started
 
 1. **Install Dependencies:**
