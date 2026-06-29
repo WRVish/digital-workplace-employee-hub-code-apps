@@ -3,6 +3,13 @@
 Welcome to the **SharePoint Framework (SPFx) Web Part** version of the Digital Workplace Employee Hub! 
 This application provides native, deep integration into Microsoft 365, allowing the Employee Hub to run seamlessly inside modern SharePoint pages and Microsoft Teams.
 
+## Screenshots
+*(Please add the following images to the `screenshots/` folder to display them here)*
+
+![SPFx Dashboard](screenshots/Employee-Hub-spfx-Screen1.png)
+![Asset Management](screenshots/Employee-Hub-spfx-Screen2.png)
+![Mobile View](screenshots/Employee-Hub-spfx-Screen3.png)
+
 ## Application Overview
 
 The SPFx Employee Hub acts as a centralized portal directly inside your company Intranet. It leverages SharePoint lists and libraries to store backend data, giving administrators full control and security over organizational information without requiring an external database.

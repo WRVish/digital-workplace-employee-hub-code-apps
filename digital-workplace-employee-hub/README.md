@@ -3,6 +3,13 @@
 Welcome to the **Power Apps Code App** version of the Digital Workplace Employee Hub! 
 This application is designed as a standalone Single Page Application (SPA) that can be embedded into Microsoft Power Apps using a PCF (Power Apps Component Framework) control, or run independently in a browser environment.
 
+## Screenshots
+*(Please add the following images to the `screenshots/` folder to display them here)*
+
+![Dashboard](screenshots/Employee-Hub-PA-Screen1.png)
+![Leave Management](screenshots/Employee-Hub-PA-Screen2.png)
+![Incident Management](screenshots/Employee-Hub-PA-Screen3.png)
+
 ## Application Overview
 
 The Employee Hub acts as a centralized portal for employees and administrators to interact with day-to-day corporate services. Its primary goal is to provide a unified, highly aesthetic interface across various business modules, including user management, leave requests, asset assignments, and incident ticketing.
